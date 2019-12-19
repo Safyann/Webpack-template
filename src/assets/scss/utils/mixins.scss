@@ -1,0 +1,42 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: $desktopWidth) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptopeWidth) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tableWidth) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phoneWidth) {
+    @content;
+  }
+}
+
+@mixin hover {
+  transition: all 0.3s ease-in-out;
+}
