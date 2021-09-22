@@ -42,11 +42,11 @@ Default:
 ```js
 const PATHS = {
   // Path to main app dir
-  src: path.join(__dirname, "../src"),
+  src: path.join(__dirname, '../src'),
   // Path to Output dir
-  dist: path.join(__dirname, "../dist"),
+  dist: path.join(__dirname, '../dist'),
   // Path to Second Output dir (js/css/fonts etc folder)
-  assets: "assets/"
+  assets: 'assets/',
 };
 ```
 
@@ -57,11 +57,11 @@ Change any folders:
 ```js
 const PATHS = {
   // src must be src
-  src: path.join(__dirname, "../src"),
+  src: path.join(__dirname, '../src'),
   // dist to public
-  dist: path.join(__dirname, "../public"),
+  dist: path.join(__dirname, '../public'),
   // assets to static
-  assets: "static/"
+  assets: 'static/',
 };
 ```
 
@@ -72,11 +72,11 @@ const PATHS = {
 
 ```js
 // React example
-import React from "react";
+import React from 'react';
 // Bootstrap example
-import Bootstrap from "bootstrap/dist/js/bootstrap.min.js";
+import Bootstrap from 'bootstrap/dist/js/bootstrap.min.js';
 // or
-import "bootstrap/dist/js/bootstrap.min.js";
+import 'bootstrap/dist/js/bootstrap.min.js';
 ```
 
 ## Import only SASS or CSS libs:
@@ -87,9 +87,9 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 ```scss
 // Sass librarys example:
-@import "../../node_modules/spinners/stylesheets/spinners";
+@import '../../node_modules/spinners/stylesheets/spinners';
 // CSS librarys example:
-@import "../../node_modules/flickity/dist/flickity.css";
+@import '../../node_modules/flickity/dist/flickity.css';
 ```
 
 ## Import js files:
@@ -99,7 +99,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 ```js
 // another js file for example
-import "./common.js";
+import './common.js';
 ```
 
 ## PUG Dir Folder:
@@ -151,13 +151,13 @@ Manual (not Automaticlly) creation any pug pages (Don't forget to RERUN dev serv
 ```js
 new HtmlWebpackPlugin({
   template: `${PAGES_DIR}/about/index.pug`,
-  filename: "./about/index.html",
-  inject: true
+  filename: './about/index.html',
+  inject: true,
 }),
   new HtmlWebpackPlugin({
     template: `${PAGES_DIR}/about/portfolio.pug`,
-    filename: "./about/portfolio.html",
-    inject: true
+    filename: './about/portfolio.html',
+    inject: true,
   });
 ```
 
@@ -187,19 +187,24 @@ Add @font-face in `/assets/scss/utils/fonts.scss`:
 ```scss
 // Example with Helvetica
 @font-face {
-  font-family: "Helvetica-Base";
-  src: url("/assets/fonts/Helvetica/Base/Helvetica-Base.eot"); /* IE9 Compat Modes */
-  src: url("/assets/fonts/Helvetica/Base/Helvetica-Base.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/Helvetica/Base/Helvetica-Base.woff") format("woff"),
-    /* Pretty Modern Browsers */
-      url("/assets/fonts/Helvetica/Base/Helvetica-Base.ttf") format("truetype"),
-    /* Safari, Android, iOS */
-      url("/assets/fonts/Helvetica/Base/Helvetica-Base.svg") format("svg"); /* Legacy iOS */
+  font-family: 'Helvetica-Base';
+  src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/Helvetica/Base/Helvetica-Base.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('/assets/fonts/Helvetica/Base/Helvetica-Base.woff') format('woff'),
+    /* Pretty Modern Browsers */ url('/assets/fonts/Helvetica/Base/Helvetica-Base.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('/assets/fonts/Helvetica/Base/Helvetica-Base.svg') format('svg'); /* Legacy iOS */
 }
 ```
 
 Add vars for font in `/assets/scss/utils/vars.scss`:
 
 ```scss
+$mySecontFont: 'Helvetica-Base', Arial, sans-serif;
+```
+
 $mySecontFont: "Helvetica-Base", Arial, sans-serif;
+
+```
+
+
 ```
